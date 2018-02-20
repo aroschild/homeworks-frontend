@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bgColor;
+  display: block;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: $fontColor;
+
+  @include mobile {
+    font-size: $fontSizeMobile;
+  }
+}
+
+.container {
+  margin: 30px auto;
+  max-width: $max-width;
+  min-height: $min-height;
+  box-shadow: $box-shadow;
+}
+
+.container-left {
+  width: 37.5%;
+  background-color: $bgColorLeft;
+  float: left;
+  min-height: $min-height;
+}
+
+.container-right {
+  width: 62.5%;
+  float: left;
+  background-color: $bgColorRight;
+  min-height: $min-height;
+}
+
+img {
+  position: relative;
+  max-width: 75%;
+  margin-top: 12%;
+  margin-left: 12%;
+}
+
+.container-left__name {
+  margin-bottom: 25px;
+}
+
+.firstName {
+  font-size: 36px;
+  color: $firstNameColor;
+}
+
+.secondName {
+  font-size: 36px;
+  color: $secondNameColor;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $secondNameColor;
+
+  &:hover {
+    background: $firstNameColor;
+    color: $bgColorRight;
+    border-radius: 5px;
+    padding: 0 5px;
+  }
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+.personalInfo__date {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-left: 0;
+  margin-bottom: 5px;
+}
+
+.personalInfo__country {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-left: 0;
+  margin-bottom: 5px;
+}
+
+.personalInfo__phone {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-left: 0;
+  margin-bottom: 5px;
+}
+
+.personalInfo__site {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-left: 0;
+  margin-bottom: 5px;
+}
+
+.personalInfo__email {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  vertical-align: top;
+  margin-top: -2px;
+  margin-left: 0;
+  margin-bottom: 25px;
+}
+
+.container-left__margin,
+.container-right__margin {
+  margin: 15px;
+}
+
+.about {
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.skills-header1,
+.skills-header2 {
+  font-family: "Calibri Light", sans-serif;
+  color: $fontColor;
+}
+
+.skills-header1,
+.skills-header2 {
+  overflow: hidden;
+}
+
+.skills-header1::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 68%;
+  height: 1px;
+  background: $fontColor;
+  border: solid #e6e6e6;
+  border-width: 0 10px;
+  margin-right: -100%;
+  overflow: hidden;
+}
+
+.skills-header2::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 82%;
+  height: 1px;
+  background: $fontColor;
+  border: solid #e6e6e6;
+  border-width: 0 10px;
+  margin-right: -100%;
+}
+
+.skills-level {
+  max-width: 100%;
+  height: 15px;
+  background-color: $skillsLevelColor;
+  margin-bottom: 12px;
+}
+
+.skills-level__knowProject {
+  float: left;
+  width: 50%;
+  background-color: $skillsLevelKnow;
+  height: 15px;
+}
+
+.skills-level__knowOffice {
+  float: left;
+  width: 90%;
+  background-color: $skillsLevelKnow;
+  height: 15px;
+}
+
+.skills-level__knowPhoto {
+  float: left;
+  width: 30%;
+  background-color: $skillsLevelKnow;
+  height: 15px;
+}
+
+.skills-level__knowHTML {
+  float: left;
+  width: 25%;
+  background-color: $skillsLevelKnow;
+  height: 15px;
+}
+
+.skills-level__knowJS {
+  float: left;
+  width: 10%;
+  background-color: $skillsLevelKnow;
+  height: 15px;
+}
+
+.skills-level__knowPHP {
+  float: left;
+  width: 15%;
+  background-color: $skillsLevelKnow;
+  height: 15px;
+}
+
+.skills-level__knowSQL {
+  float: left;
+  width: 5%;
+  background-color: $skillsLevelKnow;
+  height: 15px;
+}
+
+.container-right {
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+h3 {
+  font-weight: normal;
+}
+
+.headerInterests,
+.headerEducation,
+.headerExperience,
+.headerOtherInfo {
+  display: inline-block;
+  color: white;
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 0 5px;
+  font-family: "Calibri Light", sans-serif;
+  box-shadow: $box-shadow;
+}
+
+.headerInterests,
+.headerExperience {
+  background-color: $skillsLevelColor;
+}
+
+.headerEducation,
+.headerOtherInfo {
+  background-color: rgb(48, 81, 116);
+}
+
+.tableContainer {
+  width: 100%;
+  height: 150px;
+  text-align: left;
+  margin-bottom: 5px;
+  padding: 3px;
+}
+
+.years {
+  width: 23%;
+}
+
+.mainInfo {
+  width: 65%;
+}
+
+.activity {
+  width: 12%;
+}

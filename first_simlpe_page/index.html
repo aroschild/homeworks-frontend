@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first Web Page</title>
+</head>
+<body>
+<header>
+    <img src="images/Reshetynskyi_logo.png">
+</header>
+<h1>Summary</h1>
+<p>
+    Someone who thinks positively, can execute difficult tasks and able to control a situation<br>
+    rather than allow a situation to control me.
+</p>
+<h1>Skills</h1>
+<ul>
+    <li>Reliable</li>
+    <li>Communicative</li>
+    <li>Flexible</li>
+    <li>Creative</li>
+    <li>Proactive</li>
+    <li>Result oriented</li>
+    <li>Team player</li>
+</ul>
+<h1>Daily Tasks</h1>
+<table border="1">
+    <tr>
+        <th>&nbsp;</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+    </tr>
+    <tr>
+        <td>6.30 - 8.30</td>
+        <td colspan="5">Waking up and prepare for work</td>
+        <td colspan="2">Family</td>
+    </tr>
+    <tr>
+        <td>8.30 - 18.00</td>
+        <td colspan="5">Working</td>
+        <td colspan="2">Family</td>
+    </tr>
+    <tr>
+        <td>18.00 - 22.00</td>
+        <td>Studying</td>
+        <td>Family</td>
+        <td colspan="2">Studying</td>
+        <td colspan="3">Family</td>
+    </tr>
+    <tr>
+        <td>22.00 - 1.00</td>
+        <td colspan="7">Studying</td>
+    </tr>
+    <tr>
+        <td>1.00 - 6.30</td>
+        <td colspan="7">Sleeping</td>
+    </tr>
+</table>
+<br>
+<form method="post" action="#">
+    <fieldset>
+        <legend><b>Website evaluation</b></legend>
+    <p>
+        <b>Specify the source from where you learned about this Web page?</b>
+    </p>
+    <p>
+        <input type="checkbox" id="ain" name="source" value="ain" checked>
+        <label for="ain">ain.ua</label><br>
+        <input type="checkbox" id="dou" name="source" value="dou">
+        <label for="dou">dou.ua</label><br>
+        <input type="checkbox" id="facebook" name="source" value="facebook">
+        <label for="facebook">facebook.com</label><br>
+        <input type="checkbox" id="other" name="source" value="other">
+        <label for="other">other</label><br>
+        <input type="text" name="source" value="other">
+    </p>
+    <p>
+        <b>How would you rate the look of a Web page?</b>
+    </p>
+    <p>
+        <input type="radio" id="rate1" name="rate" value="veryGood" checked>
+        <label for="rate1">Very good</label><br>
+        <input type="radio" id="rate2" name="rate" value="good">
+        <label for="rate2">Good</label><br>
+        <input type="radio" id="rate3" name="rate" value="norm">
+        <label for="rate3">Normal</label><br>
+        <input type="radio" id="rate4" name="rate" value="bad">
+        <label for="rate4">Bad</label><br>
+        <input type="radio" id="rate5" name="rate" value="veryBad">
+        <label for="rate5">Very bad</label>
+    </p>
+    <p>
+        <b>How difficult is the navigation on the Web page?</b>
+    </p>
+    <p>
+        <input type="radio" id="nav1" name="nav" value="notDifficult" checked>
+        <label for="nav1">Not a difficult</label><br>
+        <input type="radio" id="nav2" name="nav" value="oneNorOther">
+        <label for="nav2">Neither one nor the other</label><br>
+        <input type="radio" id="nav3" name="nav" value="difficult">
+        <label for="nav3">Difficult</label>
+    </p>
+    <p>
+        <b>Would you recommend this Web page to other people?</b>
+    </p>
+    <p>
+        <label for="rateStatus">Please rate from 1 to 5:</label>
+        <select id="rateStatus" name="rateStatus">
+            <option disabled selected></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </p>
+    <p>
+        <b>Please leave your suggestions for improving this Web page:</b>
+    </p>
+    <p>
+        <textarea rows="4" cols="50" maxlength="500"></textarea>
+    </p>
+    <p>
+        <input type="submit" value="Send">
+    </p>
+    </fieldset>
+</form>
+<footer>
+    <p>
+        &copy; AR, 2018
+    </p>
+</footer>
+</body>
+</html>
