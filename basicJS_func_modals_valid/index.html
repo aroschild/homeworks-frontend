@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My first page</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!--
+Добавить на страницу модальное окно проверки логина.
+если логин совпадет с одним из списка - admin, user то предложить ввести пароль
+если пароль совпадет с одним из списка - 123, 777, 333, то вывести сообщение - Добро пожаловать {имя пользователя}!
+если пароль введен неверно то выводить сообщение - Пароль неверный
+если в поле логина ввести guest то выводить 'Добро пожаловать гость!' и не спрашивать пароль
+в случае если введено любое другое значение, выводить сообщение 'Пользователя {введенный текст логина} нет в системе'
+*Логику постараться описать отдельными функциями.
+-->
+    
+    <script>
+    
+    var validLogin = prompt('Пожалуйста, введите логин!', '');
+        validLogin = validLogin.toLowerCase();
+    
+    function loginData() {
+        switch (validLogin) {
+            case 'admin':
+            case 'user':
+                passData();
+                break;
+            case 'guest':
+                alert('Добро пожаловать гость!');
+                break;
+            default:
+                alert('Пользователя ' + validLogin + ' нет в системе!');
+                exit();
+        }
+    }
+    
+    function passData() {
+        var pass = +prompt('Пожалуйста, введите пароль!', '');
+
+        switch (pass) {
+            case 123:
+            case 777:
+            case 333:
+                alert('Добро пожаловать ' + validLogin + '!');
+                break;
+            default:
+                alert('Пароль неверный!');
+                exit();
+        }
+    }
+
+    function exit() {
+        document.write ("<body style='visibility: hidden'></body>");
+        document.write ('<style> body {background: url(img/goodBye.jpg) no-repeat fixed center} </style>');
+    }
+    
+    loginData();
+    
+    </script>
+    
+</head>
+<body>
+<div class="container">
+    <div class="container-left">
+        <img src="img/alice.png" alt="Personal photo">
+        <div class="container-left__margin">
+            <div class="container-left__name">
+                <h1>
+                    <span class="firstName">First name</span><br>
+                    <span class="secondName">Second name</span>
+                </h1>
+            </div>
+            
+            <div class="personalInfo">
+                <div>
+                    <img class="personalInfo__date" src="img/info.gif" alt="logo_info">
+                    The Date of Birth
+                </div>
+                <div>
+                    <img class="personalInfo__country" src="img/mail.gif" alt="logo_mail">
+                    Address, Country
+                </div>
+                <div>
+                    <img class="personalInfo__phone" src="img/phone.gif" alt="logo_phone">
+                    <a href="tel:+000000000000">+000(00)000-00-00</a>
+                </div>
+                <div>
+                    <img class="personalInfo__site" src="img/site.gif" alt="logo_site">
+                    <a href="https://www.linkedin.com/">https://www.linkedin.com</a>
+                </div>
+                <div>
+                    <img class="personalInfo__email" src="img/email.gif" alt="logo_email">
+                    <a href="mailto:name@mail.com">name@mail.com</a>
+                </div>
+            </div>
+            
+            <div class="about">
+                <h2><span class="skills-header1">About me</span></h2>
+                <p>
+                    Experienced specialist with NN years of experience. I have highly motivated and proactive.
+                    Have high organizational and communication skills, creative. Diversified skills include
+                    research, analytics, project management, data handling and knows of their use for decision
+                    making. With a view to personal and professional development engaged in self-education.
+                </p>
+            </div>
+            
+            <div class="skills">
+                <h2><span class="skills-header2">Skills</span></h2>
+                
+                <h3>Project management</h3>
+                <div class="skills-level">
+                    <div class="skills-level__knowProject"></div>
+                </div>
+                
+                <h3>MS Office</h3>
+                <div class="skills-level">
+                    <div class="skills-level__knowOffice"></div>
+                </div>
+                
+                <h3>Adobe Photoshop</h3>
+                <div class="skills-level">
+                    <div class="skills-level__knowPhoto"></div>
+                </div>
+                
+                <h3>HTML/CSS</h3>
+                <div class="skills-level">
+                    <div class="skills-level__knowHTML"></div>
+                </div>
+                
+                <h3>Javascript</h3>
+                <div class="skills-level">
+                    <div class="skills-level__knowJS"></div>
+                </div>
+                
+                <h3>PHP</h3>
+                <div class="skills-level">
+                    <div class="skills-level__knowPHP"></div>
+                </div>
+                
+                <h3>SQL</h3>
+                <div class="skills-level">
+                    <div class="skills-level__knowSQL"></div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-right">
+        <div class="container-right__margin">
+            <h2><span class="headerInterests">Interests</span></h2>
+            <p>
+                Project management, web-development and programming.
+            </p>
+            
+            <h2><span class="headerEducation">Education</span></h2>
+            
+            <table class="tableContainer">
+                <tbody>
+                <tr>
+                    <td class="years">2010 - 2011</td>
+                    <td class="mainInfo">Investment Institute</td>
+                    <td class="activity">Investing</td>
+                </tr>
+                <tr>
+                    <td class="years">2004 -2005</td>
+                    <td class="mainInfo">Economic University</td>
+                    <td class="activity">Banking</td>
+                </tr>
+                <tr>
+                    <td class="years">2000 - 2004</td>
+                    <td class="mainInfo">Economic University</td>
+                    <td class="activity">Banking</td>
+                </tr>
+                </tbody>
+            </table>
+            
+            <h2><span class="headerExperience">Experience</span></h2>
+            
+            <table class="tableContainer">
+                <tbody>
+                <tr>
+                    <td class="years">2006 – till today</td>
+                    <td class="mainInfo">Chief specialist of the Compliance Department in the field of foreign economic activity.</td>
+                    <td class="activity">Bank</td>
+                </tr>
+                <tr>
+                    <td class="years">2005 - 2006</td>
+                    <td class="mainInfo">Economist accounting securities transactions Department.</td>
+                    <td class="activity">Bank</td>
+                </tr>
+                <tr>
+                    <td class="years">2005</td>
+                    <td class="mainInfo">Economist accounting and statistical reporting of credit transactions Department.</td>
+                    <td class="activity">Bank</td>
+                </tr>
+                </tbody>
+            </table>
+            
+            <h2><span class="headerOtherInfo">Other information</span></h2>
+            
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis,
+                deserunt dolor doloremque earum enim eveniet ex illum iste odit officia quibusdam,
+                ratione reiciendis, sapiente sunt ut voluptas. Eum, ex.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis,
+                deserunt dolor doloremque earum enim eveniet ex illum iste odit officia quibusdam,
+                ratione reiciendis, sapiente sunt ut voluptas. Eum, ex.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
